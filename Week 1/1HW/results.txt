@@ -1,0 +1,87 @@
+Script started on 2020-07-01 00:34:24-0400
+edowalte@odd01:~/CS2401/HW1$ ./a.out
+Give me a duration of time (H:MM). A = 12 34
+Give me another duration of time (H:MM). B = 56 78
+Now, give me a constant (non-zero). C = 4
+
+Operation | Result
+    A + B | 69:52
+    A - B | 44:44
+    A * C | 50:16
+    B * C | 229:12
+    A / C | 3:80
+    B / C | 14:19
+   A == B | False
+    A > B | False
+   A >= B | False
+    A < B | True
+   A <= B | True
+
+edowalte@odd01:~/CS2401/HW1$ ./a.out
+Give me a duration of time (H:MM). A = 12:34
+Give me another duration of time (H:MM). B = 12:34
+Now, give me a constant (non-zero). C = 0
+
+Operation | Result
+    A + B | 25:80
+    A - B | 0:00
+    A * C | 0:00
+    B * C | 0:00
+Floating point exception
+edowalte@odd01:~/CS2401/HW1$ ./a.out
+Give me a duration of time (H:MM). A = 12:34
+Give me another duration of time (H:MM). B = 12:34
+Now, give me a constant (non-zero). C = 1
+
+Operation | Result
+    A + B | 25:80
+    A - B | 0:00
+    A * C | 12:34
+    B * C | 12:34
+    A / C | 12:34
+    B / C | 12:34
+   A == B | True
+    A > B | False
+   A >= B | True
+    A < B | False
+   A <= B | True
+
+edowalte@odd01:~/CS2401/HW1$ ./a.out
+Give me a duration of time (H:MM). A = 85 52
+Give me another duration of time (H:MM). B = 20 1
+Now, give me a constant (non-zero). C = 3
+
+Operation | Result
+    A + B | 105:53
+    A - B | 65:51
+    A * C | 257:36
+    B * C | 60:30
+    A / C | 28:37
+    B / C | 6:40
+   A == B | False
+    A > B | True
+   A >= B | True
+    A < B | False
+   A <= B | False
+
+edowalte@odd01:~/CS2401/HW1$ ./a.out
+Give me a duration of time (H:MM). A = 0 153
+Give me another duration of time (H:MM). B = 2 33
+Now, give me a constant (non-zero). C = 4
+
+Operation | Result
+    A + B | 5:60
+    A - B | 0:00
+    A * C | 10:12
+    B * C | 10:12
+    A / C | 0:38
+    B / C | 0:38
+   A == B | True
+    A > B | False
+   A >= B | True
+    A < B | False
+   A <= B | True
+
+edowalte@odd01:~/CS2401/HW1$ exit
+
+Script done on 2020-07-01 00:39:55-0400
