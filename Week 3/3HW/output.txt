@@ -1,0 +1,10 @@
+PS D:\School - Summer 2020\CS 2401\3HW> ./a.exe
+Now showing list One:
+Charlie   Lisa   Drew   Derrick   AJ   Bojian   Enter a name to search:Charles
+That name is not in the list.
+Drew   Derrick   AJ   Bojian   Charlie   Lisa
+PS D:\School - Summer 2020\CS 2401\3HW> ./a.exe
+Now showing list One:
+Charlie   Lisa   Drew   Derrick   AJ   Bojian   Enter a name to search:Drew
+That name is stored at address: 0x11c1910
+Drew   Derrick   AJ   Bojian   Charlie   Lisa
