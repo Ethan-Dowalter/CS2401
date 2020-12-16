@@ -1,0 +1,62 @@
+PS D:\School - Summer 2020\CS 2401\Week 5\5Lab> ./a.exe
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid.
+Enter 4 to quit and see total for the box.
+1
+Enter the radius : 5
+Enter the thickness : .5
+Enter the cost per cubic unit : 1
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid. 
+Enter 4 to quit and see total for the box.
+2
+Enter the length : 3
+Enter the width : 4
+Enter the thickness : .5
+Enter the cost per cubic unit : 1
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid.
+Enter 4 to quit and see total for the box.
+3
+Enter the length of the first base : 13
+Enter the length of the second base : 5
+Enter the height : 7
+Enter the thickness : .5
+Enter the cost per cubic unit : 1
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid. 
+Enter 4 to quit and see total for the box.
+2
+Enter the length : 6
+Enter the width : 1
+Enter the thickness : .5
+Enter the cost per cubic unit : .5
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid.
+Enter 4 to quit and see total for the box.
+1
+Enter the radius : 13
+Enter the thickness : .5
+Enter the cost per cubic unit : 6
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid.
+Enter 4 to quit and see total for the box.
+3
+Enter the length of the first base : 2
+Enter the length of the second base : 10
+Enter the height : 12
+Enter the thickness : 1
+Enter the cost per cubic unit : 2
+Enter 1 to record a Circle.
+Enter 2 to record a Rectangle.
+Enter 3 to record a Trapezoid.
+Enter 4 to quit and see total for the box.
+4
+The total cost of this box of blocks is $1815.06
+PS D:\School - Summer 2020\CS 2401\Week 5\5Lab> 

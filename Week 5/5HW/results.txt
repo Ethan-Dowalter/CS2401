@@ -1,0 +1,53 @@
+PS D:\School - Summer 2020\CS 2401\5HW> ./a.exe
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+1
+Please enter your expression:
+12 679 5 + 4 * 8 / +
+The answer is: 354
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+1
+Please enter your expression:
+34 6 + 16 * 18 -
+The answer is: 622
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+1
+Please enter your expression:
+12 6 - 8 + 7 * +
+Error. Too many operators for operands.
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+1
+Please enter your expression:
+56 78 84 + 33 *
+Error. Insufficient operators for operands.
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+1
+Please enter your expression:
+1 2 3 4 5 6 * * * * *
+The answer is: 720
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+1
+Please enter your expression:
+1 2 * 3 * 4 * 12 /
+The answer is: 2
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+3
+Invalid choice.
+
+1) Evaluate an expression in RPN notation.
+2) Quit
+2
+PS D:\School - Summer 2020\CS 2401\5HW>
