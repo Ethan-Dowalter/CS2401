@@ -1,0 +1,187 @@
+/**
+ *        @file: dlist.cc
+ *      @author: Ethan Dowalter
+ *        @date: July 27, 2020
+ *       @brief: Implementation for a template list class
+ */
+
+#include <iostream>
+#include "dlist.h"
+using namespace std;
+
+template <class T>
+Dlist<T>::Dlist(){
+    head = tail = NULL;
+    nodecount = 0;
+}
+
+template <class T>
+Dlist<T>::~Dlist(){
+    tail = head;                //used to "leapfrog" with head and delete each item
+    while (head != NULL && tail != NULL)
+    {
+        tail = head->next();
+        delete head;
+        if (tail != NULL)
+        {
+            head = tail->next();
+            delete tail;
+        }
+    }
+    cout << "Destruction complete ";
+}
+
+template <class T>
+Dlist<T>::Dlist(const Dlist &other){
+    head = tail = NULL;
+    nodecount = 0;                      //default values
+    Dnode<T> *cursor = other.head;      //walks through list being copied
+    while (cursor != NULL)
+    {
+        rear_insert(cursor->data());    //adds each item to list
+        cursor = cursor->next();
+    }
+}
+
+template <class T>
+void Dlist<T>::operator = (const Dlist &other){
+    if (&other == this)         //avoid self assignment
+    {
+        return;
+    }
+
+    Dnode<T> *cursor = head;                //destroy old list
+    while (head != NULL && cursor != NULL)
+    {
+        cursor = head->next();
+        delete head;
+        if (cursor != NULL)
+        {
+            head = cursor->next();
+            delete cursor;
+        }
+    }
+    
+    head = tail = NULL;                     //copy new list
+    nodecount = 0;
+    cursor = other.head;
+    while (cursor != NULL)
+    {
+        rear_insert(cursor->data());
+        cursor = cursor->next();
+    }
+}
+
+
+template <class T>
+void Dlist<T>::front_insert(T& item){
+    if (head == NULL)               //start a list if no items yet
+    {
+        head = tail = new Dnode<T>(item);
+    }
+    else
+    {
+        Dnode<T> *tmp = head;       //keeps the spot of head
+        head->set_previous(new Dnode<T>(item));
+        head = head->previous();
+        head->set_previous(NULL);
+        head->set_next(tmp);
+    }
+    ++nodecount;
+}
+
+template <class T>
+void Dlist<T>::rear_insert(T& item){
+    if (tail == NULL)               //start a list if no items yet
+    {
+        head = tail = new Dnode<T>(item);
+    }
+    else
+    {
+        Dnode<T> *tmp = tail;       //keeps the spot of tail
+        tail->set_next(new Dnode<T>(item));
+        tail = tail->next();
+        tail->set_next(NULL);
+        tail->set_previous(tmp);
+    }
+    ++nodecount;
+}
+
+template <class T>
+void Dlist<T>::front_remove(){
+    if (nodecount > 0)      //can't remove anything if list is empty
+    {
+        Dnode<T> *tmp = head;       //keeps spot of head to delete afterwards
+        head = head->next();
+        head->set_previous(NULL);
+        delete tmp;
+        --nodecount;
+    }
+}
+
+template <class T>
+void Dlist<T>::rear_remove(){
+    if (nodecount > 0)      //can't remove anything if list is empty
+    {
+        Dnode<T> *tmp = tail;       //keeps spot of tail to delete afterwards
+        tail = tail->previous();
+        tail->set_next(NULL);
+        delete tmp;
+        --nodecount;
+    }
+}
+
+template <class T>
+void Dlist<T>::insert_before(iterator spot, T &item){
+    Dnode<T> *cursor1 = spot.current;               //holds spot before iterator
+    Dnode<T> *cursor2 = spot.current;               //holds spot of iterator
+    cursor1 = cursor1->previous();
+    cursor2->set_previous(new Dnode<T>(item));
+    Dnode<T> *cursorNew = cursor2->previous();      //holds spot of new item
+    cursor1->set_next(cursorNew);
+    cursorNew->set_previous(cursor1);
+    cursorNew->set_next(cursor2);
+}
+
+template <class T>
+void Dlist<T>::insert_after(iterator spot, T &item){
+    Dnode<T> *cursor1 = spot.current;               //holds spot of iterator
+    Dnode<T> *cursor2 = spot.current;               //holds spot after iterator
+    cursor2 = cursor2->next();
+    cursor1->set_next(new Dnode<T>(item));
+    Dnode<T> *cursorNew = cursor1->next();          //holds spot of new item
+    cursor2->set_previous(cursorNew);
+    cursorNew->set_previous(cursor1);
+    cursorNew->set_next(cursor2);
+}
+
+template <class T>
+void Dlist<T>::remove(iterator spot){
+    Dnode<T> *rmptr = spot.current;                 //holds spot of item being removed
+    Dnode<T> *cursor1 = rmptr->previous();          //holds spot before iterator
+    Dnode<T> *cursor2 = rmptr->next();              //holds spot after iterator
+    cursor1->set_next(cursor2);
+    cursor2->set_previous(cursor1);
+    delete rmptr;
+}
+
+
+template <class T>
+void Dlist<T>::show() const{
+    Dnode<T> *cursor = head;
+    while (cursor != NULL)
+    {
+        cout << cursor->data() << ' ';
+        cursor = cursor->next();
+    }
+}
+
+template <class T>
+void Dlist<T>::reverse_show() const{
+    Dnode<T> *cursor = tail;
+    while (cursor != NULL)
+    {
+        cout << cursor->data() << ' ';
+        cursor = cursor->previous();
+    }
+}

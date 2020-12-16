@@ -1,0 +1,6 @@
+PS D:\School - Summer 2020\CS 2401\4HW> ./a.exe       
+41
+18467
+6334
+26500
+CS is the bestest at Ohio University
