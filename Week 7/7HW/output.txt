@@ -1,0 +1,11 @@
+PS D:\School - Summer 2020\CS 2401\Week 7\7HW> ./a.exe
+Enter a name you'd like to search for : Matthew
+This name occurs 7 times.
+Enter a name you'd like to compare the list to : Matthew
+There are 50 names greater than or equal to that name in the list.
+PS D:\School - Summer 2020\CS 2401\Week 7\7HW> ./a.exe
+Enter a name you'd like to search for : Jessica
+This name occurs 1 times.
+Enter a name you'd like to compare the list to : Jessica
+There are 78 names greater than or equal to that name in the list.
+PS D:\School - Summer 2020\CS 2401\Week 7\7HW> 
