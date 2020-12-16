@@ -1,0 +1,27 @@
+PS D:\School - Summer 2020\CS 2401\Week 6\6HW> ./a.exe
+What is the name of the chore? : Vacuum
+What should the priority be? (Larger number = higher priority) : 5
+What is the name of the chore? : Dust  
+What should the priority be? (Larger number = higher priority) : 8
+What is the name of the chore? : Clean
+What should the priority be? (Larger number = higher priority) : 7
+What is the name of the chore? : Dish
+What should the priority be? (Larger number = higher priority) : 4
+What is the name of the chore? : Sleep
+What should the priority be? (Larger number = higher priority) : 8
+Chore : Dust
+Priority : 8
+
+Chore : Sleep
+Priority : 8
+
+Chore : Clean
+Priority : 7
+
+Chore : Vacuum
+Priority : 5
+
+Chore : Dish
+Priority : 4
+
+PS D:\School - Summer 2020\CS 2401\Week 6\6HW> 
